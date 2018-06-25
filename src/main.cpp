@@ -1741,9 +1741,6 @@ NOTE:   unlike bitcoin we are using PREVIOUS block height here,
 */
 CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params& consensusParams, bool fSuperblockPartOnly)
 {
-    if (nPrevHeight == 0) {
-        return 500000 * COIN;
-    }
 
     CAmount nSubsidy = 10 * COIN;
 
